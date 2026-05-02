@@ -1,0 +1,12 @@
+{
+  "description": "A modern GNOME Shell extension to add transparency to GTK Adawaita apps",
+  "name": "Trans my Gnome",
+  "shell-version": [
+    "48",
+    "49",
+    "50"
+  ],
+  "url": "https://github.com/snelbinderr/trans-my-gnome",
+  "uuid": "trans-my-gnome@emmeken.net",
+  "version": 1.0
+}

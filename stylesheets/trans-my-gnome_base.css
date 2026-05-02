@@ -1,0 +1,48 @@
+/* :root:focus-within { */
+/*   --trans-my-gnome--normal: 1.0; */
+/*   --trans-my-gnome--variation: 0.0; */
+/* } */
+
+/* User variables */
+:root {
+  --trans-my-gnome--normal: 0.7;
+  --trans-my-gnome--variation: 0.05;
+  --trans-my-gnome--multiplier: 1.5;
+  --trans-my-gnome--normal-dark: 0.6;
+  --trans-my-gnome--variation-dark: 0.05;
+  --trans-my-gnome--multiplier-dark: 1.75;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --trans-my-gnome--normal: var(--trans-my-gnome--normal-dark-dark);
+    --trans-my-gnome--variation: var(--trans-my-gnome--variation-dark);
+    --trans-my-gnome--multiplier: var(--trans-my-gnome--multiplier-dark);
+  }
+}
+
+:root {
+  /* Variants */
+  --trans-my-gnome--less: calc(var(--trans-my-gnome--normal) + var(--trans-my-gnome--variation));
+  --trans-my-gnome--least: calc(var(--trans-my-gnome--normal) + var(--trans-my-gnome--variation));
+  --trans-my-gnome--more: calc(var(--trans-my-gnome--normal) - (var(--trans-my-gnome--variation) * var(--trans-my-gnome--multiplier)));
+  --trans-my-gnome--most: calc(var(--trans-my-gnome--normal) - var(--trans-my-gnome--variation) * var(--trans-my-gnome--multiplier));
+}
+
+:root {
+  --window-bg-color: rgb(from @window_bg_color r g b / var(--trans-my-gnome--most));
+  --view-bg-color: rgb(from @view_bg_color r g b / var(--trans-my-gnome--most));
+  --headerbar-bg-color: rgb(from @headerbar_bg_color r g b / var(--trans-my-gnome--more));
+  --headerbar-backdrop-color: rgb(from @headerbar_backdrop_color r g b / var(--trans-my-gnome--more));
+  --sidebar-bg-color: rgb(from @sidebar_bg_color r g b / var(--trans-my-gnome--less));
+  --sidebar-backdrop-color: rgb(from @sidebar_backdrop_color r g b / var(--trans-my-gnome--less));
+  --secondary-sidebar-bg-color: rgb(from @secondary_sidebar_bg_color r g b / var(--trans-my-gnome--least));
+  --secondary-sidebar-backdrop-color: rgb(from @secondary_sidebar_backdrop_color r g b / var(--trans-my-gnome--least));
+
+  /* The overview colors are used for backdrops in i.e. biblioteca. While libadwaita sets these directly through hex colors, they are styled the same as the secondary sidebar, so I chose to depend on them. */
+  --overview-bg-color: var(--secondary-sidebar-bg-color);
+  --overview-backdrop-color: var(--secondary-sidebar-backdrop-color);
+
+  --theme-bg-color: var(--window-bg-color);
+  --theme-base-color: var(--view-bg-color);
+}
