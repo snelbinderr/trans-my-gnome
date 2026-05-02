@@ -1,5 +1,5 @@
 {
-  "description": "A modern GNOME Shell extension to add transparency to GTK Adawaita apps",
+  "description": "A GNOME Shell extension to add transparency to GTK Adawaita apps.",
   "name": "Trans my Gnome",
   "shell-version": [
     "48",
