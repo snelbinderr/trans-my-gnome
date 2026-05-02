@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="org.gnome.shell.extensions.trans-my-gnome" path="/org/gnome/shell/extensions/trans-my-gnome/">
+    <key name="dummy" type="b">
+      <default>false</default>
+      <summary>Dummy key</summary>
+      <description>A dummy key to ensure the schema is not empty.</description>
+    </key>
+  </schema>
+</schemalist>
