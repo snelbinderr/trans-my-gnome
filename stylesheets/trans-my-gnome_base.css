@@ -10,7 +10,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --trans-my-gnome--normal: var(--trans-my-gnome--normal-dark-dark);
+    --trans-my-gnome--normal: var(--trans-my-gnome--normal-dark);
     --trans-my-gnome--variation: var(--trans-my-gnome--variation-dark);
     --trans-my-gnome--multiplier: var(--trans-my-gnome--multiplier-dark);
   }
