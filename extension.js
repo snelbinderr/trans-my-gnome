@@ -68,7 +68,7 @@ export default class TransMyGnome extends Extension {
 
   addTransMyGnomeImport(contents) {
     let removedImport = this.removeTransMyGnomeImport(contents)
-    removedImport += (removedImport == '') '' : \n
+    removedImport += (removedImport == '') ? '' : '\n'
     const importString = `@import '${this.transMyGnomeStylesheetFile.get_path()}';\n`;
     return removedImport + importString
   }
