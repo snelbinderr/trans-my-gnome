@@ -34,10 +34,6 @@
   --secondary-sidebar-bg-color: rgb(from @secondary_sidebar_bg_color r g b / var(--trans-my-gnome--least));
   --secondary-sidebar-backdrop-color: rgb(from @secondary_sidebar_backdrop_color r g b / var(--trans-my-gnome--least));
 
-  /* /1* The overview colors are used for backdrops in i.e. biblioteca. While libadwaita sets these directly through hex colors, they are styled the same as the secondary sidebar, so I chose to depend on them. *1/ */
-  /* --overview-bg-color: var(--secondary-sidebar-bg-color); */
-  /* --overview-backdrop-color: var(--secondary-sidebar-backdrop-color); */
-
   --theme-bg-color: var(--window-bg-color);
   --theme-base-color: var(--view-bg-color);
 }
